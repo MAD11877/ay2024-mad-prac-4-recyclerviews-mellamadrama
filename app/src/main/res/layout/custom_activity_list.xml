@@ -33,4 +33,13 @@
             android:layout_weight="1"
             android:text="Description" />
     </LinearLayout>
+    <ImageView
+        android:id="@+id/largeImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/sym_def_app_icon" />
 </LinearLayout>
+

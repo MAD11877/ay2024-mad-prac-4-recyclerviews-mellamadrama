@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         String profilename = getIntent().getStringExtra("profilename");
 
 
-        TextView tvName = findViewById(R.id.tvName);
+        TextView tvName = findViewById(R.id .tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         Button btnFollow = findViewById(R.id.btnFollow);
         Button btnMessage = findViewById(R.id.btnMessage);
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         String name = receivingIntent.getStringExtra("name");
         String description = receivingIntent.getStringExtra("description");
         boolean followed = receivingIntent.getBooleanExtra("followed", false);
+        int id = receivingIntent.getIntExtra("id", 0);
 
         User user = new User(name, description, id, followed);
         tvName.setText(user.name);

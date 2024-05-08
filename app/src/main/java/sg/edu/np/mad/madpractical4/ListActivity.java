@@ -9,6 +9,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +49,13 @@ public class ListActivity extends AppCompatActivity {
             user.setId(randNum);
             users.add(user);
         }
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        UserAdapter userAdapter = new UserAdapter(users, this);
+        LinearLayoutManager userLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(userLayoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(userAdapter);
 
 //        View closeButton = findViewById(R.id.imageView);
 //        AlertDialog.Builder builder = new AlertDialog.Builder(this);
