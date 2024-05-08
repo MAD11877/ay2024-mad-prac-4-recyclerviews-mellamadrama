@@ -97,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnMessage"
         android:layout_width="20mm"
         android:layout_height="8mm"
         android:layout_marginTop="30dp"

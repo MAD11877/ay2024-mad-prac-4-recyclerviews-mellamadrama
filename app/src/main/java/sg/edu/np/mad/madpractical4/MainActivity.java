@@ -39,8 +39,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnMessage = findViewById(R.id.btnMessage);
 
         Intent receivingIntent = getIntent();
-        String name = receivingIntent.getStringExtra();
+        String name = receivingIntent.getStringExtra("name");
+        String description = receivingIntent.getStringExtra("description");
+        boolean followed = receivingIntent.getBooleanExtra("followed", false);
 
+        User user = new User(name, description, id, followed);
         tvName.setText(user.name);
         tvDescription.setText(user.description);
         btnFollow.setText("Follow");
